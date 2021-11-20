@@ -1,0 +1,6 @@
+{
+  "name": "Allow NSFW In Inbox",
+  "description": "Allows NSFW unreads and mentions in the inbox.",
+  "version": "1.0.0",
+  "author": "Lighty"
+}
