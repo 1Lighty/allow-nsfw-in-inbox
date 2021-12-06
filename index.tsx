@@ -27,7 +27,7 @@ export default class ANII extends Plugin {
   }
 
   patchMessageStoreHook() {
-    const MessageStoreHookModule = getByString({ only: 'default', onlyModule: true }, 'reloadMessages');
+    const MessageStoreHookModule = getByString({ only: 'default', ret: 'exports' }, 'reloadMessages');
     instead('ANII', MessageStoreHookModule, 'default', (_, args, orig) => {
       // @ts-ignore
       const olUseState = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentDispatcher.current.useState;
